@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMM-li-a7z">
+                                <rect key="frame" x="250" y="285" width="100" height="29"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="6bm-Al-Aaj"/>
+                                    <constraint firstAttribute="width" constant="100" id="dy3-Zc-uSR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="重新加载">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickReloadBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qeI-R1-f4f"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pdD-OK-s28">
+                                <rect key="frame" x="0.0" y="464" width="600" height="136"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="F37-4t-rZK"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pdD-OK-s28" secondAttribute="bottom" id="5rf-OH-G7g"/>
+                            <constraint firstItem="fMM-li-a7z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Leh-3B-wMu"/>
+                            <constraint firstItem="pdD-OK-s28" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="k7d-i8-S5U"/>
+                            <constraint firstAttribute="trailing" secondItem="pdD-OK-s28" secondAttribute="trailing" id="pIq-1u-8p5"/>
+                            <constraint firstItem="fMM-li-a7z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="w24-OZ-4n7"/>
+                            <constraint firstItem="pdD-OK-s28" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wAx-EG-7Ad"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnReload" destination="fMM-li-a7z" id="HzY-vC-Lvu"/>
+                        <outlet property="webView" destination="pdD-OK-s28" id="Qau-5i-JT9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="291" y="365"/>
+        </scene>
+    </scenes>
+</document>
